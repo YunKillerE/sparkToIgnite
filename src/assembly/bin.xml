@@ -1,0 +1,40 @@
+ <assembly>
+    <formats>
+        <format>tar.gz</format>
+    </formats>
+<!--	<files>
+	    <file>
+		   <source>template_file_list</source>
+		   <fileMode>644</fileMode>
+		   <lineEnding>unix</lineEnding>
+		</file>
+	</files>-->
+    <fileSets>
+    	<fileSet>
+            <directory>smoke_test</directory>
+            <outputDirectory>smoke_test</outputDirectory>
+        </fileSet>
+        <fileSet>
+            <directory>db</directory>
+            <outputDirectory>db</outputDirectory>
+        </fileSet>
+        <fileSet>
+            <directory>bin</directory>
+            <outputDirectory>bin</outputDirectory>
+            <directoryMode>0700</directoryMode>
+            <fileMode>0700</fileMode>
+            <includes>
+                <include>*.sh</include>
+            </includes>
+            <lineEnding>unix</lineEnding>
+        </fileSet>
+    </fileSets>
+
+    <dependencySets>
+        <dependencySet>
+            <outputDirectory>lib</outputDirectory>
+            <fileMode>0644</fileMode>
+        </dependencySet>
+    </dependencySets>
+
+</assembly>
